@@ -67,6 +67,17 @@ function main(){
             return arr;
         })
 
+    svg.append('text')
+        .attr('x', 315)
+        .attr('y', 595)
+        .attr('font-size', '12pt')
+        .text('Round')
+
+    svg.append('text')
+        .attr('x', 53)
+        .attr('y', 20)
+        .text('Average Seed')
+
 }
 
 main()

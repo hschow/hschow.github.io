@@ -139,7 +139,7 @@ function draw() {
             break;
 
     }
-    if (t%135 == 134){
+    if (t%100 == 99){
         x++;
     }
 

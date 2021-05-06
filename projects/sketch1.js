@@ -13,6 +13,8 @@ function main(){
         .append('svg')
         .attr('height', height)
         .attr('width', width)
+        .attr('style',"background-color: white")
+        .attr('transform','translate(415, 0)')
 
     const g = svg.append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
@@ -53,7 +55,11 @@ function main(){
         .attr('height', function (d){
             return yScale(d) - 30;
         })
-        .attr('fill', 'rgb(185, 180, 190)')
+        .attr('fill', 'rgb(0, 140, 210)')
+        .append('title')
+        .text(function (d){
+            return d;
+        })
 
     svg.append('text')
         .attr('x', 600)

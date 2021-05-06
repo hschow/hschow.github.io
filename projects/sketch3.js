@@ -13,6 +13,8 @@ function main(){
         .append('svg')
         .attr('height', height)
         .attr('width', width)
+        .attr('style',"background-color: white")
+        .attr('transform','translate(415, 0)')
 
     const g = svg.append('g')
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
@@ -21,6 +23,7 @@ function main(){
     r32 = [3,5.125,4.0625,3.0625,3.6875,4.4375, 5.875]
     s16 =[2.25,3.25,3.125,1.5,2,3,4.625]
     e8 = [2.75,1.75,3,3.75,2.5,4.5, 3.75]
+    years = [2021, 2019, 2018, 2017, 2016, 2015, 2014]
 
     let xScale = d3.scaleLinear()
         .domain([1, 4])
@@ -66,10 +69,14 @@ function main(){
             arr.push(yScale(e8[i]))
             return arr;
         })
+        .append('title')
+        .text(function (d, i){
+            return years[i];
+        })
 
     svg.append('text')
-        .attr('x', 315)
-        .attr('y', 595)
+        .attr('x', 515)
+        .attr('y', 575)
         .attr('font-size', '12pt')
         .text('Round')
 

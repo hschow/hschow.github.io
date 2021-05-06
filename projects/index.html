@@ -1,35 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>March Madness</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My March Madness Model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/css/OverlayScrollbars.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/blog.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     <script src="https://d3js.org/d3.v6.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
-    <h2>Henry Chow</h2>
-    <h3>March Madness</h3>
+    <style>
+        figure{
+            text-align: center;
+        }
+        svg{
+            text-align: center;
+        }
+        p5Canvas{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<p>My project is about March Madness and how accurate the model I created was in predicting games</p>
-<p>The objectives are:
-    <br>1)Was my model more accurate than the average bracket, and if so by how much? Which games were the most shocking to both my model and bracket makers in general?
-    <br>2)Who were the perceived favorites and how did they perform?
-    <br>3)The user would learn about the effectiveness of my bracket, in addition to randomness and madness that is march madness.
-    </p>
-<p>These first 2 graphics are for objective 1</p>
-<script src="sketch1.js"></script>
-<p>This graph shows the distributions of my bracktes, and where my different brackets end up in terms of overall percentile of the 5+ millions brackets that were made through ESPN
-    <br>
-    <br>The following graph is a scatter plot that has the percent of times I picked the favorite or better seed to win on the x axis and the y axis is how often all ESPN brackets did</p>
-<script src="draw.js"></script>
-<p>This next one is for objective 2
-<br>And is a small multiples of two different bar charts that show the percent of times I or ESPN choose certain teams to win it all and then how far they went</p>
-<script src="sketch2.js"></script>
-<p>The following one is for objective 3 and displays the average seed after each round
-<br>The line in red is 2021 which signifies that this year saw more "chaos" due to more upsets than usual</p>
-<script src="sketch3.js"></script>
-<p>The last one should be for objective 1 and it is a bar chart race, where the different charts are mine, the top one overall and ESPN's "peoples" bracket</p>
-<script src="BCrace.js"></script>
-<p>Pressing/clicking on the start/stop button will start or stop the bar chart race</p>
+<!-- START NAV -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <span class="navbar-burger burger" data-target="navbarMenu">
+                        <span></span>
+                <span></span>
+                <span></span>
+                </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="../index" class="navbar-item is-active">
+                    Home
+                </a>
+                <a href="#dot" class="navbar-item">
+                    Dot Plot
+                </a>
+                <a href="#race" class="navbar-item">
+                    Bar Chart Race
+                </a>
+                <a href="#hist" class="navbar-item">
+                    Histogram
+                </a>
+                <a href="#fav" class="navbar-item">
+                    Favorites
+                </a>
+                <a href="#line" class="navbar-item">
+                    Line Chart
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END NAV -->
+
+<section class="hero is-info is-medium is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 id="top" class="title">My March Madness Model</h1>
+            <h3 class="has-text-centered">by Henry Chow</h3>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content has-text-centered">
+                            <p class="title article-title">What is March Madness?</p>
+                            <div class="tags has-addons level-item">
+                                <span class="tag is-rounded">May 4, 2021</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="content article-body">
+                        <p>Each year millions of people attempt to predict the results of March Madness, which is the end year tournament for college basketball. No one has ever come close to predicting all 63 games of the tournament. In fact in most years there are no perfect brackets after just the first round. Never the less I decided to try and create a model that would help me predict the outcomes of each game.</p>
+                        <!--<h3 class="has-text-centered">How to properly center tags in bulma? </h3> -->
+                        <h3 class = 'has-text-centered'>The Model</h3>
+                        <p> The model is a binary logistic regression model that would predict whether or not the higher seeded team would beat the lower seeded team.
+                            The model was trained over a number of randomly selected regular season games from this last year and then tested over a smaller sample of games to prevent over fitting.
+                            <a href="https://github.com/hschow/hschow.github.io/tree/master/projects/model/data">Data used to make model</a>
+                        </p>
+                        <h3 class="has-text-centered">Objectives: </h3>
+                        <ol>
+                            <ul>1) Which games were the most shocking to both my model and bracket makers in general? Was my model more accurate than the average bracket, and if so by how much?</ul>
+                            <ul>2) Who were the perceived favorites of the tournament and how did they perform?</ul>
+                            <ul>3) What Made this year "harder" to predict?</ul>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- END ARTICLE -->
+        </div>
+    </section>
+</div>
+<div>
+    <figure id="dot" class="column is-8 is-offset-2">
+        <script src="draw.js"></script>
+        <figcaption>Figure 1: Game odds</figcaption>
+    </figure>
+</div>
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content has-text-centered">
+                            <p class="title article-title">Objective 1</p>
+                        </div>
+                    </div>
+                    <p class="sub-title">Which games were the most shocking to both my model and bracket makers in general? Was my model more accurate than the average bracket, and if so by how much?</p>
+                    <div class="content article-body">
+
+                        <p>
+                            <br>
+                            In the graph above (figure 1) if the points are on the right side of the diagonal line that means I gave the favorite a higher chance than the average bracket [we will use <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/nationalBracket">ESPN's people's bracket</a> or ESPN's bracket as the average bracket, and this bracket was made by taking each entry from ESPN's Men's Tournament Challenge and counting each entry as a vote]. 70% of the upsets were located to the left of the diagonal line, with me correctly picking 30% of them. However ESPN's bracket correctly picked two more games than my model. With my biggest misses being Drake vs USC and Oral Roberts vs Ohio State.
+                            Oral Roberts vs Ohio State was an usually hard game to pick since less than <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">5%</a>
+                            of people correctly picked the outcome of the game. Historically the 15 seed is <a href="https://www.ncaa.com/news/basketball-men/article/2021-03-19/history-2-seeds-vs-15-seeds-march-madness"> has an all time record of 9-135 vs 2 seeds or a 6.25% winning percentage</a> making this upset one of the biggest in the last 5 years.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div>
+    <figure id="race" class="column is-8 is-offset-2">
+        <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5838209"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <figcaption>Figure 2: # of Corrected Predictions</figcaption>
+    </figure>
+</div>
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="content article-body">
+                        <p>
+                            <br>
+                            As you can see in the bar chart race above (figure 2) I had a total of 7 brackets that correctly predicted more games than ESPN's bracket. However I had more than 7 brackets so to see a full picture of how all my brackets performed I created a histogram for the percentiles of brackets in <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/leaderboard">ESPN's leaderboard</a> which is show below (figure 3).
+                            In this figure my median bracket fell below the 50th percentile but the average bracket (ESPN's) fell within one standard deviation of the mean, so the average bracket is not statistically significantly better or worse than my brackets/model in general. Not to mention I had a bracket that is at the 50th percentile but picked less games correctly than my average bracket.
+                            This is because, picking games in the later rounds correctly is worth more points, for example correctly picking the championship game is equal to 320 points which is the same amount as correctly picking the whole first round, despite picking 31 less games. So because of this to maximize a bracket's points it is important to pick the correct champion....
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<figure id="hist">
+    <script src="sketch1.js" class="content"></script>
+    <figcaption>Figure 3: Bracket Percentiles</figcaption>
+</figure>
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <div class="content article-body">
+                        <h2 class="has-text-centered">Objective 2</h2>
+                        <p class="sub-title">Who were the perceived favorites of the tournament and how did they perform?</p>
+                        <p>
+                            <br>
+                            This year there were only 3 teams that had more than 10% of all brackets picking them to win it all, Gonzaga, Illinois, and Baylor [figure 4]. It just so happen that of those 3 teams the only team I did not pick once to win it all ending up being the champion (Baylor). Of the other two teams with more than a 10% chance, one of them went to the finals and lost (Gonzaga) and the other disappointed and lost in the second round (Illinois).
+                            Both of these team were picked to win it all more frequently than Baylor within Gonzaga being predicted to win it all in over a third of all brackets. Between the other teams that I thought had a chance to win it all, they both made it past the first weekend (the first 2 rounds) but lost in the elite eight (Michigan) and final four (Houston).
+                            Overall of all the favorites the team that failed to live up to expectations the most would have to be Illinois since 15% of ESPN brackets and 36% of my brackets chose them as champions but they failed to survive the first weekend.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<figure id="fav">
+     <script src="sketch2.js" class="card"></script>
+    <figcaption>Figure 4: Tournament Favorites</figcaption>
+</figure>
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <h2 class ="has-text-centered">Objective 3</h2>
+                    <p class="sub-title">What made this year "harder" to predict?</p>
+
+                    <p><br>
+                        Due to the large number of upsets and bigger upsets, this year's average seed at the end of the first round, second round, and Sweet Sixteen would be considered an outlier of the last few years since the numbers would not fall within
+                        a 95% confidence interval of the results of the previous years.
+                    </p>
+                    <pre>
+    95% Confidence Intervals for Average Seed of the first 4 rounds and then what is was for 2021
+
+                        Round        Lower bound     Mean     Upper bound       2021
+                        _____________________________________________________________
+                        Round 1           5.444    5.9219          6.3997     6.5625
+
+                        Round 2           3.034    3.8958          4.7577      5.875
+
+                        Sweet Sixteen    1.7768    2.5208          3.2648      4.625
+
+                        Elite Eight      2.0267    3.0417          4.0566       3.75
+
+                    </pre>
+                    <p> Part of the reason for the high average seed was the <a href="https://fivethirtyeight.com/features/the-pac-12-is-busting-everyones-brackets/"> PAC-12</a> performing better than expected.
+                        Specifically UCLA an 11 seed who barely made the tournament going all the way to the final four.
+                        To further the chaos, the 15 seed Oral Roberts getting to the second Sweet Sixteen <a href="https://www.ncaa.com/news/basketball-men/article/2021-03-19/history-2-seeds-vs-15-seeds-march-madness">(2nd time in history a 15 seed has ever done this)</a>
+                        Adding all this together is you get Figure 5 where the average seed for 2021 is in red and you can see its much higher than previous years
+                    </p>
+                    </div>
+                </div>
+            </div>
+        <figure id="line">
+            <script src="sketch3.js"></script>
+            <figcaption>Figure 5: Average Seed by Round</figcaption>
+        </figure>
+            <!-- END ARTICLE -->
+    </section>
+    <!-- END ARTICLE FEED -->
+</div>
+
+<script async type="text/javascript" src="../js/bulma.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        //The first argument are the elements to which the plugin shall be initialized
+        //The second argument has to be at least a empty object or a object with your desired options
+        OverlayScrollbars(document.querySelectorAll("body"), { });
+    });
+</script>
+
+
+
 </body>
+
 </html>

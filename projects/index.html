@@ -84,7 +84,7 @@
                         <div class="media-content has-text-centered">
                             <p class="title article-title">What is March Madness?</p>
                             <div class="tags has-addons level-item">
-                                <span class="tag is-rounded">May 4, 2021</span>
+                                <span class="tag is-rounded">May 9, 2021</span>
                             </div>
 
                         </div>
@@ -113,7 +113,9 @@
 <div>
     <figure id="dot" class="column is-8 is-offset-2">
         <script src="draw.js"></script>
-        <figcaption>Figure 1: Game odds</figcaption>
+        <figcaption>Figure 1: Game odds: The y axis shows what percent of ESPN brackets chose the "favorite"/higher seed to win, while the x axis
+            <br>is the percent chance my model gave that same team to win. The point is red if the higher seed won and blue if the lower seed won.
+            <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">[Data]</a> </figcaption>
     </figure>
 </div>
 <div class="container">
@@ -146,7 +148,8 @@
 <div>
     <figure id="race" class="column is-8 is-offset-2">
         <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/5838209"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <figcaption>Figure 2: # of Corrected Predictions</figcaption>
+        <figcaption>Figure 2: # of Corrected Predictions: The different bars represent the top overall bracket, ESPN's bracket and different brackets my model made with the number referring to the order in which they were made
+        <a href="https://github.com/hschow/hschow.github.io/blob/master/projects/model/data/MMMMbarchartrace.csv">[Data]</a> </figcaption>
     </figure>
 </div>
 <div class="container">
@@ -172,7 +175,7 @@
 </div>
 <figure id="hist">
     <script src="sketch1.js" class="content"></script>
-    <figcaption>Figure 3: Bracket Percentiles</figcaption>
+    <figcaption>Figure 3: Bracket Percentiles, <a href="https://github.com/hschow/hschow.github.io/blob/master/projects/model/data/bracketResults.csv">[Data]</a></figcaption>
 </figure>
 <div class="container">
     <!-- START ARTICLE FEED -->
@@ -198,7 +201,8 @@
 </div>
 <figure id="fav">
      <script src="sketch2.js" class="card"></script>
-    <figcaption>Figure 4: Tournament Favorites</figcaption>
+    <figcaption>Figure 4: Tournament Favorites: Hovering over the different bars gives you the percent chance my model or all ESPN brackets gave
+        <br>each team to win the championship. The different colors represent how far each team made it in the tournament <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">[Data]</a></figcaption>
 </figure>
 <div class="container">
     <!-- START ARTICLE FEED -->
@@ -207,7 +211,7 @@
             <!-- START ARTICLE -->
             <div class="card article">
                 <div class="card-content">
-                    <h2 style="font-size: xx-large" class="has-text-centered">Objective 3</h2>
+                    <h1 class ="has-text-centered" style="font-size: xx-large">Objective 3</h1>
                     <p class="sub-title">What made this year "harder" to predict?</p>
 
                     <p><br>
@@ -238,13 +242,29 @@
             </div>
         <figure id="line">
             <script src="sketch3.js"></script>
-            <figcaption>Figure 5: Average Seed by Round</figcaption>
+            <figcaption>Figure 5: Average Seed by Round: this shows the average seed per round over the last 7 tournaments and 2021 is in red and all
+                <br> the other years are black because their exact year doesn't matter since they are all significantly lower than 2021 <a href="https://github.com/hschow/hschow.github.io/blob/master/projects/model/data/seedingAlt.csv">[Data]</a> </figcaption>
         </figure>
             <!-- END ARTICLE -->
     </section>
     <!-- END ARTICLE FEED -->
 </div>
-
+<div class="container">
+    <!-- START ARTICLE FEED -->
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+            <!-- START ARTICLE -->
+            <div class="card article">
+                <div class="card-content">
+                    <h1 class ="has-text-centered" style="font-size: xx-large">Conclusion</h1>
+                    <p>My model was not significantly better or worse statistically than the average model, however it was slightly worse since ESPN's scoring system
+                    puts a large emphasis on picking the champion and I was not able to do so. In addition this year's bracket saw both bigger upsets (Oral Roberts) and more upsets than normal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 <script async type="text/javascript" src="../js/bulma.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.9.1/js/OverlayScrollbars.min.js'></script>
 <script>
@@ -254,9 +274,7 @@
         OverlayScrollbars(document.querySelectorAll("body"), { });
     });
 </script>
-
-
-
+<p class="has-text-centered" style="font-size: small">made with Bulma by Henry Chow</p>
 </body>
 
 </html>

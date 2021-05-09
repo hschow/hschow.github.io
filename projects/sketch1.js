@@ -21,7 +21,7 @@ function main(){
     let xScale = d3.scaleLinear()
         .domain([0, 100])
         .range([50, width - 20]);
-    let histoTicks = [0,'1-9', '10-19', '20-29', '30-39', '40-49','50-59', '60-69', '70-79', '80-89', '90-99']
+    let histoTicks = ['','1-9', '10-19', '20-29', '30-39', '40-49','50-59', '60-69', '70-79', '80-89', '90-99']
     let xAxisGenerator = d3.axisBottom(xScale)
         .tickFormat((d,i) => histoTicks[i])
     let xAxis = svg.append("g")
@@ -46,12 +46,12 @@ function main(){
         .enter()
         .append('rect')
         .attr('x', function (d, i){
-            return xScale(i*10) + 20
+            return xScale(i*10) + 10
         })
         .attr('y', function (d){
             return height - yScale(d) - 10;
         })
-        .attr('width', 40)
+        .attr('width', 50)
         .attr('height', function (d){
             return yScale(d) - 30;
         })
@@ -62,14 +62,14 @@ function main(){
         })
 
     svg.append('text')
-        .attr('x', 600)
-        .attr('y', 575)
-        .attr('font-size', '9pt')
-        .text('percentile')
+        .attr('x', 0)
+        .attr('y', 599)
+        .attr('font-size', '10pt')
+        .text('Percentiles')
     svg.append('text')
         .attr('x', 22)
         .attr('y', 20)
-        .attr('font-size', '9pt')
+        .attr('font-size', '10pt')
         .text('Count')
     svg.append('text')
         .attr('x', 200)

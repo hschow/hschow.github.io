@@ -1,0 +1,65 @@
+R64,R64Per,R32,R32Per,S16,S16Per,E8,E8Per,F4,F4Per,NCG,NCGPer
+1Gonzaga,97.40%,1Gonzaga,91.30%,1Gonzaga,81.80%,1Gonzaga,65.70%,1Gonzaga,51.80%,1Gonzaga,34.40%
+1Michigan,96.90%,1Illinois,85.60%,1Illinois,68.40%,1Illinois,52.00%,1Illinois,31.50%,1Illinois,15.20%
+1Baylor,96.60%,1Baylor,81.70%,1Baylor,68.00%,1Baylor,47.80%,1Baylor,26.80%,1Baylor,10.40%
+1Illinois,96.30%,1Michigan,81.20%,1Michigan,60.20%,1Michigan,37.80%,1Michigan,13.70%,1Michigan,7.80%
+2Ohio State,95.20%,2Ohio State,79.50%,2Ohio State,54.50%,2Alabama,23.10%,2Ohio State,9.40%,2Iowa,3.70%
+2Houston,94.90%,2Houston,78.20%,2Iowa,51.60%,2Ohio State,22.70%,2Houston,8.40%,2Ohio State,3.50%
+2Iowa,94.20%,2Iowa,77.60%,2Houston,48.40%,2Houston,17.60%,2Iowa,8.10%,2Houston,3.30%
+2Alabama,93.90%,2Alabama,74.20%,2Alabama,46.10%,3Texas,15.50%,2Alabama,6.60%,2Alabama,3.00%
+3Kansas,92.10%,3Texas,68.20%,3Texas,32.70%,2Iowa,14.40%,4Oklahoma State,4.00%,3Kansas,1.90%
+3West Virginia,91.80%,3Kansas,64.50%,3West Virginia,30.30%,4Florida State,8.90%,3Kansas,3.90%,3Texas,1.60%
+3Texas,91.40%,3West Virginia,60.80%,3Kansas,28.50%,4Oklahoma State,8.80%,3Texas,3.80%,4Oklahoma State,1.50%
+4Florida State,89.10%,4Florida State,59.10%,4Florida State,20.80%,3West Virginia,8.10%,3West Virginia,3.10%,3West Virginia,1.10%
+4Purdue,87.50%,4Oklahoma State,55.10%,3Arkansas,20.50%,3Kansas,7.50%,3Arkansas,2.50%,3Arkansas,0.90%
+3Arkansas,84.60%,3Arkansas,52.00%,4Oklahoma State,14.10%,3Arkansas,6.90%,5Villanova,2.40%,4Florida State,0.90%
+4Oklahoma State,84.30%,4Virginia,50.80%,6Texas Tech,13.50%,5Villanova,5.20%,4Florida State,2.20%,4Virginia,0.90%
+6USC,78.70%,4Purdue,49.90%,4Purdue,10.30%,4Purdue,4.30%,4Virginia,1.80%,5Villanova,0.80%
+5Tennessee,78.40%,5Villanova,38.80%,5Villanova,10.00%,6Texas Tech,4.10%,4Purdue,1.50%,8North Carolina,0.80%
+4Virginia,76.80%,6Texas Tech,36.30%,6USC,9.00%,4Virginia,3.90%,5Tennessee,1.40%,4Purdue,0.60%
+6Texas Tech,76.10%,5Tennessee,34.50%,6San Diego State,8.50%,5Tennessee,3.70%,8North Carolina,1.40%,5Tennessee,0.60%
+5Villanova,73.10%,5Creighton,31.90%,5Tennessee,8.40%,8North Carolina,2.80%,6Texas Tech,1.40%,6Texas Tech,0.50%
+5Creighton,72.30%,6USC,28.30%,4Virginia,8.10%,7UConn,2.70%,7UConn,0.80%,7UConn,0.40%
+6BYU,65.80%,5Colorado,23.60%,7UConn,7.00%,5Colorado,2.50%,6San Diego State,0.70%,8LSU,0.30%
+7Oregon,65.20%,6San Diego State,23.60%,6BYU,6.90%,6BYU,2.10%,5Creighton,0.70%,5Creighton,0.30%
+8LSU,64.40%,6BYU,20.50%,5Colorado,6.50%,8LSU,2.10%,5Colorado,0.70%,5Colorado,0.30%
+6San Diego State,58.20%,7UConn,15.00%,7Oregon,6.20%,6San Diego State,2.00%,6USC,0.60%,9Wisconsin,0.30%
+7Clemson,57.50%,7Oregon,14.70%,8LSU,5.80%,6USC,1.70%,8LSU,0.60%,7Oregon,0.30%
+8Oklahoma,57.20%,12Georgetown,14.00%,8North Carolina,5.50%,5Creighton,1.60%,8Loyola Chicago,0.60%,8Loyola Chicago,0.30%
+5Colorado,57.10%,11Syracuse,13.10%,7Florida,4.40%,8Loyola Chicago,1.60%,9Wisconsin,0.60%,6USC,0.30%
+7UConn,56.40%,8LSU,12.40%,7Clemson,4.40%,9Wisconsin,1.40%,6BYU,0.60%,6BYU,0.30%
+8Loyola Chicago,56.10%,7Clemson,12.00%,11Syracuse,4.30%,7Clemson,1.40%,7Florida,0.50%,6San Diego State,0.30%
+8North Carolina,53.60%,7Florida,10.60%,5Creighton,4.00%,7Florida,1.40%,7Oregon,0.50%,7Florida,0.30%
+7Florida,53.40%,13Ohio,10.10%,8Loyola Chicago,3.80%,7Oregon,1.30%,7Clemson,0.50%,11Syracuse,0.30%
+10Virginia Tech,46.60%,8North Carolina,9.80%,9Wisconsin,3.40%,11Syracuse,1.20%,11Syracuse,0.50%,12Georgetown,0.20%
+9Wisconsin,46.40%,10Maryland,8.60%,12Georgetown,3.10%,12Georgetown,1.20%,12Georgetown,0.40%,11UCLA,0.20%
+9Georgia Tech,43.90%,11UCLA,8.30%,10Virginia Tech,3.00%,9Georgia Tech,1.00%,9Georgia Tech,0.40%,7Clemson,0.20%
+10Maryland,43.60%,10Virginia Tech,8.00%,10Maryland,3.00%,11UCLA,0.90%,8Oklahoma,0.40%,9Georgia Tech,0.20%
+12Georgetown,42.90%,12Winthrop,7.80%,11UCLA,2.60%,8Oklahoma,0.90%,11UCLA,0.30%,8Oklahoma,0.20%
+9Missouri,42.90%,10Rutgers,7.80%,9Georgia Tech,2.30%,9St. Bonaventure,0.80%,10Virginia Tech,0.30%,16Drexel,0.20%
+10Rutgers,42.50%,8Loyola Chicago,7.50%,10Rutgers,2.30%,10Maryland,0.80%,10Maryland,0.30%,10Virginia Tech,0.20%
+11Syracuse,41.80%,12UCSB,7.30%,8Oklahoma,2.10%,10Virginia Tech,0.80%,9Missouri,0.30%,9Missouri,0.10%
+9St. Bonaventure,35.60%,9Wisconsin,7.10%,9St. Bonaventure,2.10%,9Missouri,0.60%,16Drexel,0.30%,10Maryland,0.10%
+10VCU,34.80%,11Utah State,6.40%,10VCU,1.70%,10Rutgers,0.60%,9St. Bonaventure,0.30%,10Rutgers,0.10%
+11UCLA,34.20%,13Liberty,5.50%,11Utah State,1.60%,16Drexel,0.50%,10Rutgers,0.20%,9St. Bonaventure,0.10%
+12UCSB,27.70%,10VCU,5.40%,14Colgate,1.60%,12Winthrop,0.50%,16Norfolk St,0.20%,16Hartford,0.10%
+12Winthrop,26.90%,9Georgia Tech,5.30%,9Missouri,1.40%,14Colgate,0.50%,12Oregon State,0.20%,12Oregon State,0.10%
+11Utah State,23.90%,14Colgate,5.20%,11Drake,1.20%,11Utah State,0.50%,13Ohio,0.20%,13Ohio,0.10%
+13Ohio,23.20%,9St. Bonaventure,5.10%,12Winthrop,1.20%,16Hartford,0.40%,14Colgate,0.20%,16Norfolk St,0.10%
+12Oregon State,21.60%,12Oregon State,4.80%,13Liberty,1.10%,12Oregon State,0.40%,16Hartford,0.20%,11Utah State,0.10%
+11Drake,21.30%,11Drake,4.70%,15Grand Canyon,1.10%,13Ohio,0.40%,12Winthrop,0.20%,12Winthrop,0.10%
+13Liberty,15.70%,8Oklahoma,4.40%,13Ohio,1.10%,10VCU,0.40%,11Utah State,0.20%,13Liberty,0.10%
+14Colgate,15.40%,13North Texas,3.60%,12Oregon State,1.10%,13Liberty,0.40%,13Liberty,0.20%,14Colgate,0.10%
+13North Texas,12.50%,13UNC Greensboro,3.30%,15Iona,1.00%,16Texas Southern,0.40%,16Texas Southern,0.20%,15Cleveland State,0.10%
+13UNC Greensboro,10.90%,9Missouri,3.20%,15Cleveland State,1.00%,16Norfolk St,0.40%,10VCU,0.20%,10VCU,0.10%
+14Abil Christian,8.60%,14Abil Christian,3.00%,14Abil Christian,0.90%,11Drake,0.40%,15Cleveland State,0.20%,11Drake,0.10%
+14Morehead State,8.20%,14Morehead State,2.50%,15Oral Roberts,0.90%,14Abil Christian,0.40%,11Drake,0.20%,12UCSB,0.10%
+14E Washington,7.90%,14E Washington,2.50%,16Drexel,0.90%,12UCSB,0.30%,12UCSB,0.20%,15Grand Canyon,0.10%
+15Iona,6.10%,15Grand Canyon,2.30%,12UCSB,0.80%,15Grand Canyon,0.30%,15Grand Canyon,0.20%,14Abil Christian,0.10%
+15Grand Canyon,5.80%,15Iona,2.30%,13UNC Greensboro,0.80%,15Iona,0.30%,15Iona,0.10%,14Morehead State,0.10%
+15Cleveland State,5.10%,15Cleveland State,2.00%,13North Texas,0.80%,15Cleveland State,0.30%,14Abil Christian,0.10%,15Iona,0.10%
+15Oral Roberts,4.80%,15Oral Roberts,1.90%,14Morehead State,0.80%,13UNC Greensboro,0.30%,14Morehead State,0.10%,15Oral Roberts,0.10%
+16Drexel,3.70%,16Drexel,1.60%,16Hartford,0.80%,13North Texas,0.30%,15Oral Roberts,0.10%,16Texas Southern,0.10%
+16Hartford,3.40%,16Hartford,1.40%,14E Washington,0.70%,14Morehead State,0.30%,13UNC Greensboro,0.10%,13UNC Greensboro,0.10%
+16Texas Southern,3.10%,16Texas Southern,1.30%,16Texas Southern,0.70%,15Oral Roberts,0.30%,13North Texas,0.10%,13North Texas,0.10%
+16Norfolk St,2.70%,16Norfolk St,1.20%,16Norfolk St,0.70%,14E Washington,0.30%,14E Washington,0.10%,14E Washington,0.10%

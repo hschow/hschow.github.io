@@ -71,10 +71,10 @@ function main(){
         .append('rect')
         .attr('x', function (d){
             if (d<0){
-                return ((width/2) + 140 + xScale2(d+5));
+                return ((width/2) + 135 + xScale2(d+5));
             }
             else {
-                return xScale1(d)-10;
+                return xScale1(d)-15;
             }
         })
         .attr('y', function (d){
@@ -88,7 +88,7 @@ function main(){
                 return height - yScale(peoplesPicks[d-1]) + 5;
             }
         })
-        .attr('width', 20)
+        .attr('width', 30)
         .attr('height', function (d){
             if (d<0){
                 if (myPicks[d+5] == 0){
@@ -103,35 +103,35 @@ function main(){
         .attr('fill', function (d){
             if (d<0){
                 if (mColrs[d+5]==20){
-                    return 'rgb(110, 60, 110)'
+                    return '#a6d854'
                 }
                 else if ( mColrs[d+5] == 10){
-                    return 'rgb(90, 153, 180)'
+                    return '#8da0cb'
                 }
                 else if(mColrs[d+5] == 15){
-                    return 'rgb(20, 120, 60)'
+                    return '#e78ac3'
                 }
                 else {
-                    return 'rgb(210, 160, 60)'
+                    return '#fc8d62'
                 }
             }
             if (pColrs[d-1]==20){
-                return 'rgb(110, 60, 110)'
+                return '#a6d854'
             }
             else if ( pColrs[d-1] == 10){
-                return 'rgb(90, 153, 180)'
+                return '#8da0cb'
             }
             else if(pColrs[d-1] == 15){
-                return 'rgb(20, 120, 60)'
+                return '#e78ac3'
             }
             else if (pColrs[d-1]==5){
-                return 'rgb(210, 160, 60)'
+                return '#fc8d62'
             }
             else if (pColrs[d-1] == 25){
-                return 'rgb(230, 0, 0)'
+                return '#ffd92f'
             }
             else {
-                return 'rgb(180, 160, 170)'
+                return '#66c2a5'
             }
         })
         .append('title')
@@ -146,32 +146,32 @@ function main(){
         .attr('cx', 460)
         .attr('cy', 120)
         .attr('r', 3)
-        .attr('fill', 'rgb(180, 160, 170)')
+        .attr('fill', '#66c2a5')
     svg.append('circle')
         .attr('cx', 460)
         .attr('cy', 105)
         .attr('r', 3)
-        .attr('fill', 'rgb(210, 160, 60)')
+        .attr('fill', '#fc8d62')
     svg.append('circle')
         .attr('cx', 460)
         .attr('cy', 85)
         .attr('r', 3)
-        .attr('fill', 'rgb(90, 153, 180)')
+        .attr('fill', '#8da0cb')
     svg.append('circle')
         .attr('cx', 460)
         .attr('cy', 70)
         .attr('r', 3)
-        .attr('fill', 'rgb(20, 120, 60)')
+        .attr('fill', '#e78ac3')
     svg.append('circle')
         .attr('cx', 460)
         .attr('cy', 55)
         .attr('r', 3)
-        .attr('fill', 'rgb(110, 60, 110)')
+        .attr('fill', '#a6d854')
     svg.append('circle')
         .attr('cx', 460)
         .attr('cy', 40)
         .attr('r', 3)
-        .attr('fill', 'rgb(230, 0, 0)')
+        .attr('fill', '#ffd92f')
     svg.append('text')
         .attr('x', 465)
         .attr('y', 123)

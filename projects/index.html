@@ -39,7 +39,7 @@
                 </span>
         </div>
         <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
+            <div class="navbar-end"> <!-- This area creates hyperlinks to the different visualizations on the website; the href trys to find the object on the site that has the same name -->
                 <a href="../index" class="navbar-item is-active">
                     Home
                 </a>
@@ -74,7 +74,7 @@
 </section>
 
 <div class="container">
-    <!-- START ARTICLE FEED -->
+    <!-- START INTRO ARTICLE FEED -->
     <section class="articles">
         <div class="column is-8 is-offset-2">
             <!-- START ARTICLE -->
@@ -106,20 +106,20 @@
                     </div>
                 </div>
             </div>
-            <!-- END ARTICLE -->
+            <!-- END INTRO ARTICLE: this first part is to setup the project by giving background and presenting the objectives -->
         </div>
     </section>
 </div>
 <div>
-    <figure id="dot" class="column is-8 is-offset-2">
+    <figure id="dot" class="column is-8 is-offset-2"> <!-- It was important to give this figure an id of dot so that the hyperlinka bove could find it -->
         <script src="draw.js"></script>
         <figcaption>Figure 1: Game odds: The y axis shows what percent of ESPN brackets chose the "favorite"/higher seed to win, while the x axis
             <br>is the percent chance my model gave that same team to win. The point is red if the higher seed won and blue if the lower seed won.
-            <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">[Data]</a> </figcaption>
+            <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">[Data]</a> </figcaption> <!--figcaption allows you to add a caption to all of your visualizations -->
     </figure>
 </div>
 <div class="container">
-    <!-- START ARTICLE FEED -->
+    <!-- START ARTICLE FEED RELATED TO THE FIRST VIS -->
     <section class="articles">
         <div class="column is-8 is-offset-2">
             <!-- START ARTICLE -->
@@ -139,6 +139,7 @@
                             Oral Roberts vs Ohio State was an usually hard game to pick since less than <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">5%</a>
                             of people correctly picked the outcome of the game. Historically the 15 seed <a href="https://www.ncaa.com/news/basketball-men/article/2021-03-19/history-2-seeds-vs-15-seeds-march-madness"> has an all time record of 9-135 vs 2 seeds or a 6.25% winning percentage</a> making this upset one of the biggest in the last 5 years.
                         </p>
+                        <!-- Throughout the website and text paragraphs I put hyperlinks to where I found some on the info, in addition those same links will usually include extra info -->
                     </div>
                 </div>
             </div>
@@ -153,7 +154,7 @@
     </figure>
 </div>
 <div class="container">
-    <!-- START ARTICLE FEED -->
+    <!-- START ARTICLE FEED -- I had to end thee article feeds ans start them again inbetween each visualization because I was unable to add them to the "card" and if I did not do this then all the visualization would be stuck at the bottom and they would not flow -->
     <section class="articles">
         <div class="column is-8 is-offset-2">
             <!-- START ARTICLE -->
@@ -199,7 +200,7 @@
         </div>
     </section>
 </div>
-<figure id="fav">
+<figure id="fav"> <!-- Each vis needs to be in a figure that way a figure caption can be included -->
      <script src="sketch2.js" class="card"></script>
     <figcaption>Figure 4: Tournament Favorites: Hovering over the different bars gives you the percent chance my model or all ESPN brackets gave
         <br>each team to win the championship. The different colors represent how far each team made it in the tournament <a href="https://fantasy.espn.com/tournament-challenge-bracket/2021/en/whopickedwhom">[Data]</a></figcaption>
@@ -218,6 +219,7 @@
                         Due to the large number of upsets and bigger upsets, this year's average seed at the end of the first round, second round, and Sweet Sixteen would be considered an outlier of the last few years since the numbers would not fall within
                         a 95% confidence interval of the results of the previous years.
                     </p>
+                    <!-- A pre tag is what creates a sub section in a card that has a grey background and for the table I did some manual typing of spaces to get the spacing right -->
                     <pre>
     95% Confidence Intervals for Average Seed of the first 4 rounds and then what is was for 2021
 
